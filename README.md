@@ -1,46 +1,111 @@
-<<<<<<< HEAD
-# HundredCode Dashboard
+# 🚀 LeetCode100 – Coding Progress Dashboard
 
-A React + Vite dashboard for tracking the top 100 HundredCode problems with authentication, completion badges, and a digital certificate experience.
+## 📌 Overview
 
-## Features
+LeetCode100 is a web-based dashboard that tracks and showcases the completion of 100 LeetCode coding challenges. The platform helps users monitor their coding journey, visualize progress, and celebrate milestones through achievement certificates.
 
-- React + Vite project structure
-- Login authentication demo with persistent state
-- Protected dashboard route
-- Top 100 important HundredCode problems list
-- Completion toggle for each problem
-- Badge unlock system for Easy, Medium, Hard milestones
-- Digital certificate modal when all 100 problems are complete
-- Progress stored in `localStorage`
+## ✨ Features
 
-## Getting Started
+* 🔐 User Authentication (Login & Signup)
+* 📊 Coding Progress Tracking
+* 🏆 100 Problems Completion Certificate
+* 📈 Progress Statistics Dashboard
+* 🎨 Modern and Responsive UI
+* ⚡ Fast Performance with React & Vite
+* 📱 Mobile-Friendly Design
 
-1. Install dependencies
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React.js
+* TypeScript
+* Vite
+* CSS / Tailwind CSS
+
+### Backend
+
+* Node.js
+* Express.js
+
+### Database
+
+* MongoDB
+
+### Authentication
+
+* JWT Authentication
+* Google OAuth (Optional)
+
+## 📂 Project Structure
+
+```bash
+LeetCode100/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   ├── services/
+│   └── App.tsx
+├── server/
+├── package.json
+└── README.md
+```
+
+## 🚀 Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Nithyasree1206/LeetCode100.git
+```
+
+### Navigate to Project
+
+```bash
+cd LeetCode100
+```
+
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-2. Start the development server
+### Start Development Server
 
 ```bash
 npm run dev
 ```
 
-3. Open the URL shown in the terminal (usually `http://localhost:5173`)
+## 🎯 Project Goal
 
-## Login Credentials
+The main objective of this project is to encourage consistent coding practice by tracking solved LeetCode problems and rewarding users with a completion certificate upon reaching 100 solved challenges.
 
-- Email: `student@hundredcode.com`
-- Password: `Leet@123`
+## 📸 Screenshots
 
-## Notes
+Add screenshots of:
 
-- The form is built as an authentication demo for access control.
-- Progress is saved locally so refreshes keep your completed problem state.
-- Once all 100 problems are marked complete, a certificate button becomes available.
-- Last developer: Nithyasree S
-=======
-# LeetCode100
->>>>>>> 02bede7b45c3ccdb9773c2ecb1231b5618fca35b
+* Login Page
+* Dashboard
+* Progress Tracker
+* Certificate Page
+
+## 🌟 Future Enhancements
+
+* AI-based Coding Recommendations
+* Leaderboard System
+* Daily Coding Streak Tracker
+* Difficulty-wise Analytics
+* Profile Sharing
+
+## 👩‍💻 Author
+
+**Nithyasree S**
+
+GitHub: https://github.com/Nithyasree1206
+
+## 📜 License
+
+This project is licensed under the MIT License.
