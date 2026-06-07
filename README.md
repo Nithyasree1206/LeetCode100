@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # HundredCode Dashboard
 
 A React + Vite dashboard for tracking the top 100 HundredCode problems with authentication, completion badges, and a digital certificate experience.
@@ -40,3 +41,6 @@ npm run dev
 - Progress is saved locally so refreshes keep your completed problem state.
 - Once all 100 problems are marked complete, a certificate button becomes available.
 - Last developer: Nithyasree S
+=======
+# LeetCode100
+>>>>>>> 02bede7b45c3ccdb9773c2ecb1231b5618fca35b
