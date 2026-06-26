@@ -33,7 +33,7 @@ function parseJwt(token: string) {
   return JSON.parse(payload);
 }
 
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:4000';
+const API_BASE = import.meta.env.VITE_API_BASE || (import.meta.env.PROD ? "" : 'http://localhost:4000');
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(() => {
@@ -76,23 +76,27 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const login = async (email: string, password: string): Promise<AuthResult> => {
-    try {
-      const res = await fetch(`${API_BASE}/api/auth/login`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
-      });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) {
-        return { ok: false, message: data.message || 'Login failed' };
-      }
-      setUser({ email: data.user.email, name: data.user.name });
-      window.localStorage.setItem('leetcode-dashboard-token', data.token);
-      return { ok: true };
-    } catch (err: any) {
-      return { ok: false, message: err?.message || 'Network error' };
+  try {
+    const res = await fetch(`${API_BASE}/api/auth/login`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password }),
+    });
+
+    const data = await res.json().catch(() => ({}));
+
+    if (!res.ok) {
+      return { ok: false, message: data.message || 'Login failed' };
     }
-  };
+
+    setUser({ email: data.user.email, name: data.user.name });
+    window.localStorage.setItem('leetcode-dashboard-token', data.token);
+
+    return { ok: true };
+  } catch (err: any) {
+    return { ok: false, message: err?.message || 'Network error' };
+  }
+};
 
   const register = async (email: string, password: string, name?: string): Promise<AuthResult> => {
     try {

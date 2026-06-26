@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: leetcode-dashboard
+    env: node
+    buildCommand: npm run build:all
+    startCommand: npm run start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: PORT
+        value: 4000

@@ -1,2 +1,1 @@
-export const GOOGLE_CLIENT_ID = import.meta.env.VITE_AUTH_API_KEY || '';
 export const API_BASE = import.meta.env.PROD ? "" : "http://localhost:4000";

@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "start:server": "node server/index.js"
+    "start:server": "node server/index.js",
+    "start": "node server/index.js",
+    "build:all": "npm install && npm run build && cd server && npm install"
   },
   "dependencies": {
     "react": "^18.3.1",

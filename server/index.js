@@ -17,11 +17,11 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// ---------- ADD THIS (IMPORTANT) ----------
-app.get('/', (req, res) => {
-  res.send('Auth API is running 🚀');
-});
-// -----------------------------------------
+// Serve frontend static files from 'dist' directory
+const distPath = path.join(__dirname, '..', 'dist');
+app.use(express.static(distPath));
+
+
 
 function readDB() {
   const raw = fs.readFileSync(DB_PATH, 'utf-8');
@@ -113,6 +113,11 @@ app.get('/api/auth/verify', (req, res) => {
   }
 });
 
+// Catch-all route to serve the React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(distPath, 'index.html'));
+});
+
 app.listen(PORT, () => {
-  console.log('Auth server running on port', PORT);
+  console.log('Server running on port', PORT);
 });

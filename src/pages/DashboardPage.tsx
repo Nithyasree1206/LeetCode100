@@ -289,7 +289,7 @@ function DashboardPage() {
       )}
 
       <footer className="developer-footer">
-        Last developer: <strong>Nithyasree S</strong>
+        Dev : <strong>Nithyasree S</strong>
       </footer>
     </div>
   );
